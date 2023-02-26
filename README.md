@@ -17,3 +17,7 @@ echo "source ~/.config/.zshrc" >> ~/.zshrc
 ## ALACRITTY
 
 - [Install alacritty-themes](https://github.com/alacritty/alacritty-theme)
+
+## TELESCOPE/ FUZZY FINDING
+
+- [Install ripgrep](https://github.com/BurntSushi/ripgrep)

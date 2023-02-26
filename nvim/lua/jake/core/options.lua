@@ -17,7 +17,6 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
-
 -- appearance
 opt.termguicolors = true
 opt.background = "dark"
