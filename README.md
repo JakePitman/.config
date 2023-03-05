@@ -21,3 +21,7 @@ echo "source ~/.config/.zshrc" >> ~/.zshrc
 ## TELESCOPE/ FUZZY FINDING
 
 - [Install ripgrep](https://github.com/BurntSushi/ripgrep)
+
+## EXA
+
+- [Install exa](https://github.com/ogham/exa#homebrew)
