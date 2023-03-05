@@ -98,6 +98,9 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- speed up load time by optimising lua
+	use("lewis6991/impatient.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
