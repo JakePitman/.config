@@ -69,13 +69,19 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
+-- configure yaml server
+lspconfig["yamlls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure tailwindcss server
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
--- configure tailwindcss server
+-- configure json server
 lspconfig["jsonls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
