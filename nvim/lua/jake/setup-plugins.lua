@@ -31,7 +31,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-	use("shaunsingh/moonlight.nvim")
+	use("shaunsingh/moonlight.nvim") -- colorscheme
 	vim.g.moonlight_italic_comments = true
 	vim.g.moonlight_disable_background = true
 	vim.g.moonlight_contrast = false
@@ -44,6 +44,7 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-tree.lua") -- file explorer
 	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
 	use("nvim-lualine/lualine.nvim") -- statusline
+	use("tpope/vim-fugitive") -- git wrapper
 
 	-- Fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for telescope - better sorting performance
