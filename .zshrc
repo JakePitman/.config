@@ -64,6 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 alias vim=/usr/local/bin/vim #use 8.1
 alias vim="TERM=screen-256color nvim" # set TERM for colors to work in tmux. Figure out better way to set TERM globally
 alias greenpush='~/tools/github-push-automation/main.sh'
+alias keychain='ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
 
 # Adds ssh key to keychain. Issue may be fixed in future
 # ssh-add --apple-use-keychain ~/.ssh/id_ed25519
