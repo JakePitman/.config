@@ -36,6 +36,7 @@ return packer.startup(function(use)
 	vim.g.moonlight_disable_background = true
 	vim.g.moonlight_contrast = false
 	vim.g.moonlight_borders = true
+	vim.g.NERDSpaceDelims = 1 -- Add space after comment delimiter
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround") -- add, delete, change surroundings
