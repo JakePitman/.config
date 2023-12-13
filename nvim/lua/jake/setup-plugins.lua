@@ -46,6 +46,9 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
 	use("nvim-lualine/lualine.nvim") -- statusline
 	use("tpope/vim-fugitive") -- git wrapper
+	use("github/copilot.vim") -- GH Copilot
+	vim.g.copilot_no_tab_map = true
+	vim.g.copilot_assume_mapped = true
 
 	-- Fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for telescope - better sorting performance
@@ -70,13 +73,25 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-		requires = {
-			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
-		},
-	}) -- enhanced lsp uis
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
+		config = function()
+			require("lspsaga").setup({
+				-- keybinds for navigation in lspsaga window
+				scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
+				-- use enter to open file with definition preview
+				definition = {
+					-- edit = "<CR>",
+					edit = "<C-CR>",
+				},
+				ui = {
+					colors = {
+						normal_bg = "#022746",
+					},
+				},
+			})
+		end,
+	})
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
