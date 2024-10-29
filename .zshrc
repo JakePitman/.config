@@ -45,7 +45,6 @@ bfr() {
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
-export NODE_ENV=development
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
